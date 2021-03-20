@@ -1,6 +1,7 @@
 # 주석 쓰는법 # 또는 할 범위를 컨트롤 슬래시 
 import discord 
 import asyncio
+import os
 
 client = discord.client()
 
@@ -19,4 +20,5 @@ async def on_ready():
 #     if message.content == "할말":
 #         await message.channel.send("봇이 답할말")
 
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
